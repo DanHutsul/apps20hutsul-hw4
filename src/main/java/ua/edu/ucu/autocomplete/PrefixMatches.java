@@ -40,7 +40,7 @@ public class PrefixMatches {
     }
 
     public Iterable<String> wordsWithPrefix(String pref) {
-        if (pref.length() > 2) {
+        if (pref.length() < 2) {
             throw new IllegalArgumentException("String too short");
         }
         return trie.wordsWithPrefix(pref);

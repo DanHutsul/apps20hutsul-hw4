@@ -1,100 +1,108 @@
 package ua.edu.ucu.tries;
 
-import ua.edu.ucu.immutable.Queue;
-
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class RWayTrie implements Trie {
+    private static final int R = 256;
 
-    private static final int R = 26;
-    private Node head = new Node(null);
-    private int size = 0;
+    private Node head = new Node();
+    private int size;
 
-    // A private class of Node
-    private class Node {
+    private static class Node {
         private Object value;
-        private Node next = null;
-
-        public Node(Object e) {
-            value = e;
-        }
-
-        public void setValue(Object e) {
-            value = e;
-        }
-
-        public void setNext(Node newNext) {
-            next = newNext;
-        }
-
-        public Object getValue() {
-            return value;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public Node copy() {
-            Node startNode = new Node(value);
-            Node currentNode = this;
-            Node newNode = startNode;
-            while (currentNode.getNext() != null) {
-                currentNode = currentNode.getNext();
-                newNode.setNext(new Node(currentNode.getValue()));
-                newNode = newNode.getNext();
-            }
-            return startNode;
-        }
+        private Node[] next = new Node[R];
     }
-
 
     @Override
     public void add(Tuple t) {
         String word = t.term;
-        Node currentNode = head;
-        if (size() == 0) {
-            head.setValue(word);
+        int value = t.weight;
+        if (word == null) {
+            throw new IllegalArgumentException("NULL is not a valid value");
         }
-
         else {
-            for (int x = 0; x < size - 1; x++) {
-                currentNode = head.getNext();
-            }
-            currentNode.setNext(new Node(word));
+            head = add(head, word, value, 0);
         }
-        size++;
+    }
+
+    private Node add(Node node, String word, int value, int length) {
+        if (node == null) {
+            node = new Node();
+        }
+        if (length == word.length()) {
+            if (node.value == null) {
+                this.size++;
+            }
+            node.value = value;
+            return node;
+        }
+        char c = word.charAt(length);
+        node.next[c] = add(node.next[c], word, value, length + 1);
+        return node;
+    }
+
+    public String get(String word) {
+        if (word == null) {
+            throw new IllegalArgumentException("NULL is not a valid argument");
+        }
+        Node node = get(head, word, 0);
+        if (node == null) {
+            return null;
+        }
+        return (String) node.value;
+    }
+
+    private Node get(Node node, String word, int length) {
+        if (node == null) {
+            return null;
+        }
+        if (length == word.length()) {
+            return node;
+        }
+        return get(node.next[word.charAt(length)], word, length + 1);
     }
 
     @Override
     public boolean contains(String word) {
-        Node currentNode = head;
-        for (int x = 0; x < size - 1; x++) {
-            if (currentNode.getValue().toString().contains(word)) {
-                return true;
-            }
-            currentNode = currentNode.getNext();
+        if (word == null) {
+            throw new IllegalArgumentException("NULL is not a valid argument");
         }
-        return false;
+        return get(word) != null;
     }
 
     @Override
     public boolean delete(String word) {
-        if (!contains(word) || size == 0) {
-            return false;
+        if (word == null) {
+            throw new IllegalArgumentException("NULL is not a valid argument");
         }
-        int x = 0;
-        Node previousNode = head;
-        Node currentNode = head;
-        while (x < size) {
-            previousNode = currentNode.copy();
-            currentNode = currentNode.getNext();
-            if (currentNode.getValue().toString().contains(word)) {
-                previousNode.setNext(currentNode.getNext());
+        head = delete(head, word, 0);
+        return head != null;
+    }
+
+    private Node delete(Node node, String word, int length) {
+        if (node == null) {
+            return null;
+        }
+        if (length == word.length()) {
+            if (node.value != null) {
+                size--;
+            }
+            node.value = null;
+        }
+        else {
+            char c = word.charAt(length);
+            node.next[c] = delete(node.next[c], word, length + 1);
+        }
+        if (node.value != null) {
+            return node;
+        }
+        for (int c = 0; c < R; c++) {
+            if (node.next[c] != null) {
+                return node;
             }
         }
-        size--;
-        return true;
+        return null;
     }
 
     @Override
@@ -104,26 +112,23 @@ public class RWayTrie implements Trie {
 
     @Override
     public Iterable<String> wordsWithPrefix(String s) {
-        Queue q = new Queue();
-        collect(head.copy(), s, q);
-
-        ArrayList<String> result = new ArrayList<>();
-        while (!q.getQueue().isEmpty()) {
-            result.add((String) q.dequeue());
-        }
+        Queue<String> result = new LinkedList<>();
+        Node node = get(head, s, 0);
+        collect(node, new StringBuilder(s), result);
         return result;
     }
 
-    private void collect(Node x, String pre, Queue q) {
-        if (x == null) {
+    private void collect(Node node, StringBuilder s, Queue<String> result) {
+        if (node == null) {
             return;
         }
-        if (x.getValue() != null) {
-            q.enqueue(pre);
+        if (node.value != null) {
+            result.offer(s.toString());
         }
-        for (int c = 0; c < R; c++) {
-            char symbol = (char) ((int) 'a' + c);
-            collect(x.getNext(), pre + symbol, q);
+        for (char c = 0; c < R; c++) {
+            s.append(c);
+            collect(node.next[c], s, result);
+            s.deleteCharAt(s.length() - 1);
         }
     }
 

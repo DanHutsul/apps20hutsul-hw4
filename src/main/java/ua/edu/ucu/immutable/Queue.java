@@ -28,4 +28,8 @@ public class Queue {
     public void enqueue(Object e) {
         queue = queue.addLast(e);
     }
+
+    public int size() {
+        return this.queue.size();
+    }
 }
