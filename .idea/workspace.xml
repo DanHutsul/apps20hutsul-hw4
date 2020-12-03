@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97cb14bb-5f11-4a67-9571-f9c9cbd4dcde" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/autocomplete/PrefixMatches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/autocomplete/PrefixMatches.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/autocomplete/PrefixMatches.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/edu/ucu/autocomplete/PrefixMatches.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/immutable/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/edu/ucu/immutable/Queue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/tries/RWayTrie$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/tries/RWayTrie$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/edu/ucu/tries/RWayTrie$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/tries/RWayTrie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/edu/ucu/tries/RWayTrie.class" afterDir="false" />
     </list>
@@ -42,12 +38,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1682" />
+          <entry key="java" value="1731" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1682" />
+          <entry key="JAVA" value="1731" />
         </counts>
       </usages-collector>
     </session>
@@ -57,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../apps20dulher-hw4-master/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="186">
+              <caret line="107" column="35" selection-end-line="130" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
@@ -83,14 +79,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+            <state relative-caret-position="458">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2720#2721#0" expanded="true" />
-                <element signature="e#2762#2763#0" expanded="true" />
-                <element signature="e#3412#3413#0" expanded="true" />
-                <element signature="e#3439#3440#0" expanded="true" />
+                <element signature="e#2818#2819#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
+                <element signature="e#3530#3531#0" expanded="true" />
+                <element signature="e#3562#3563#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,9 +185,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/ImmutableArrayList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/ImmutableLinkedList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/Queue.java" />
-        <option value="$PROJECT_DIR$/../apps20dulher-hw4-master/src/main/java/ua/edu/ucu/tries/RWayTrie.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/edu/ucu/autocomplete/PrefixMatchesITTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/edu/ucu/autocomplete/PrefixMatches.java" />
+        <option value="$PROJECT_DIR$/../apps20dulher-hw4-master/src/main/java/ua/edu/ucu/tries/RWayTrie.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java" />
       </list>
     </option>
@@ -297,7 +293,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607031195392" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607031574436" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../apps20dulher-hw4-master" />
   </component>
   <component name="RunDashboard">
@@ -347,18 +343,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 22h 48m 29s.xml">
-      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 22h 50m 29s.xml">
-      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 22h 57m 40s.xml">
-      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 03m 48s.xml">
-      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 10m 08s.xml">
       <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
     </history-entry>
@@ -375,6 +359,18 @@
       <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 29m 01s.xml">
+      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 32m 39s.xml">
+      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 38m 07s.xml">
+      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 38m 59s.xml">
+      <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrefixMatchesITTest - 2020.12.03 at 23h 39m 27s.xml">
       <configuration name="PrefixMatchesITTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -469,30 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../apps20dulher-hw4-master/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#2461#2462#0" expanded="true" />
-            <element signature="e#2503#2504#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3235#3236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/edu/ucu/immutable/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -538,16 +510,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
+    <entry file="file://$PROJECT_DIR$/../apps20dulher-hw4-master/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        <state relative-caret-position="186">
+          <caret line="107" column="35" selection-end-line="130" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2720#2721#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-            <element signature="e#3412#3413#0" expanded="true" />
-            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+            <element signature="e#2503#2504#0" expanded="true" />
+            <element signature="e#3203#3204#0" expanded="true" />
+            <element signature="e#3235#3236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/edu/ucu/tries/RWayTrie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2818#2819#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+            <element signature="e#3530#3531#0" expanded="true" />
+            <element signature="e#3562#3563#0" expanded="true" />
           </folding>
         </state>
       </provider>
